@@ -15,7 +15,6 @@ This repo packages the fix as two agent skills: profile the data first, decide t
 | `skills/chart-choice/` | The main skill: data profiling, form selection, the ten checks. References hold the full taxonomy, an anti-pattern list, a visibility checklist, per-surface notes and sources. |
 | `skills/chart-review/` | Companion skill: audit an existing chart (code, spec, screenshot or URL) against the same rules. Findings only; it rebuilds nothing unless asked. |
 | `hooks/chart-nudge.sh` | Optional Claude Code hook: denies a session's first chart-code write if chart-choice was never loaded, once, with a reason. Fails open. |
-| `case-study/` | Three real Home Assistant dashboard views reviewed and reworked under the skill, with before and after screenshots and every rule that fired named. |
 | `research/` | The raw notes the skill was built from: best practice, prior art, an environment survey and invocation design. |
 
 ## How it works
@@ -85,16 +84,6 @@ Then register it in `~/.claude/settings.json`:
 
 The script depends on `jq` and on Claude Code's transcript layout; it is not portable to Codex.
 
-## Does it work?
-
-The case study answers with one real rework: three Home Assistant dashboard views, reviewed with chart-review and rebuilt with chart-choice driving every decision. Selected results:
-
-- 11 threshold lines drawn where there had been none, on dashboards whose entire vocabulary is thresholds.
-- One view went from five charts to three; its height dropped from 3,441 px to 1,580 px, with nothing lost.
-- Two recently built, carefully made charts failed cold selection outright: hours running down the page instead of left to right, and 336 columns doing the job of two lines.
-- Ten placeholder hours were being drawn as real data; check 10 (gaps stay gaps) caught what a visual polish never would have.
-- The skill also got 13 things wrong or missed them; they are listed in the case study against file and line.
-
 ## Adapting it to your environment
 
 Two files are meant to be edited after install:
@@ -104,4 +93,4 @@ Two files are meant to be edited after install:
 
 ## Licence
 
-MIT. The research notes and case study describe one specific environment; the numbers in them are real.
+MIT. The research notes describe one specific environment; the numbers in them are real.
