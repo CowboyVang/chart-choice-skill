@@ -15,7 +15,6 @@ This repo packages the fix as two agent skills: profile the data first, decide t
 | `skills/chart-choice/` | The main skill: data profiling, form selection, the ten checks. References hold the full taxonomy, an anti-pattern list, a visibility checklist, per-surface notes and sources. |
 | `skills/chart-review/` | Companion skill: audit an existing chart (code, spec, screenshot or URL) against the same rules. Findings only; it rebuilds nothing unless asked. |
 | `hooks/chart-nudge.sh` | Optional Claude Code hook: denies a session's first chart-code write if chart-choice was never loaded, once, with a reason. Fails open. |
-| `research/` | The raw notes the skill was built from: best practice, prior art, an environment survey and invocation design. |
 
 ## How it works
 
@@ -93,4 +92,4 @@ Two files are meant to be edited after install:
 
 ## Licence
 
-MIT. The research notes describe one specific environment; the numbers in them are real.
+MIT.

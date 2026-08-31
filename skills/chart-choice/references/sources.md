@@ -1,6 +1,6 @@
 # Sources
 
-Tags used across the references. Reachability checked 29 August 2026. Raw research notes: the `research/` directory of this repository (w1 best practice, w2 prior art, w3 environment, w4 invocation, design).
+Tags used across the references. Reachability checked 29 August 2026.
 
 ## Perception and theory
 
